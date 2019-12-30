@@ -1,0 +1,6 @@
+framework module PNImagePicker {
+  umbrella header "PNImagePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,14 +13,14 @@
 
 /* Begin PBXFileReference section */
 		219B8F1217A0E8A99351B51E /* Pods-PNImagePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNImagePicker_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PNImagePicker_Tests/Pods-PNImagePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		440ED2FA2E50AEDD2C5C4287 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		440ED2FA2E50AEDD2C5C4287 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PNImagePicker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNImagePicker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8E1CA20F2F40D8D26C649D15 /* Pods-PNImagePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNImagePicker_Tests.release.xcconfig"; path = "Target Support Files/Pods-PNImagePicker_Tests/Pods-PNImagePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AFCA617CAF2E94C8EB9823D9 /* PNImagePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PNImagePicker.podspec; path = ../PNImagePicker.podspec; sourceTree = "<group>"; };
+		AFCA617CAF2E94C8EB9823D9 /* PNImagePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PNImagePicker.podspec; path = ../PNImagePicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DCB1635280685B6C35221EA4 /* Pods_PNImagePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNImagePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF824A23C35D3982943230E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EF824A23C35D3982943230E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,6 @@
 				219B8F1217A0E8A99351B51E /* Pods-PNImagePicker_Tests.debug.xcconfig */,
 				8E1CA20F2F40D8D26C649D15 /* Pods-PNImagePicker_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,10 +130,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -147,6 +142,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -179,10 +175,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PNImagePicker_Tests/Pods-PNImagePicker_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PNImagePicker/PNImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

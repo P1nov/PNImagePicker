@@ -1,0 +1,24 @@
+PODS:
+  - PNImagePicker (0.1.0):
+    - SnapKit
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - PNImagePicker (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  PNImagePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PNImagePicker: 329ebc8ee8c8e9822406a9a3342c6731e49d8387
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 8a62e6637d4a8bcce8423d269372d2864e2a50dc
+
+COCOAPODS: 1.8.4

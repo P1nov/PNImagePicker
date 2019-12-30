@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PNImagePicker'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PNImagePicker.'
+  s.summary          = 'A conveninent ImagePicker Tool for U'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,16 +19,18 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
+
                        DESC
 
-  s.homepage         = 'https://github.com/1473781785@qq.com/PNImagePicker'
+  s.homepage         = 'https://github.com/P1nov/PNImagePicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '1473781785@qq.com' => '1473781785@qq.com' }
-  s.source           = { :git => 'https://github.com/1473781785@qq.com/PNImagePicker.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/P1nov/PNImagePicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.swift_version = ['5.0', '5.1', '4.2', '4.0']
 
   s.source_files = 'PNImagePicker/Classes/**/*'
   
@@ -37,6 +39,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.frameworks = 'UIKit', 'Foundation', 'Photos'
+   s.dependency 'SnapKit'
 end
