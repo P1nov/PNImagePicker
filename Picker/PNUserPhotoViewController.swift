@@ -365,7 +365,7 @@ private extension PNUserPhotoViewController {
                         PNProgressHUD.present(with: "此相册没有照片！",
                                               presentType: .fromTop,
                                               font: .systemFont(ofSize: 15.0, weight: .medium),
-                                              backgroundColor: UIColor(rgb: 0xFF4B32),
+                                              backgroundColor: UIColor.init(red: 1, green: 75 / 255.0, blue: 50 / 255.0, alpha: 1.0),
                                               textColor: .white,
                                               in: nil)
                     }else {
@@ -380,6 +380,18 @@ private extension PNUserPhotoViewController {
             controller.userAlbums = albums
             
             self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+
+    
+    func closeCurrent() {
+        
+        if self.presentingViewController != nil {
+            
+            self.dismiss(animated: true, completion: nil)
+        }else {
+            
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }
