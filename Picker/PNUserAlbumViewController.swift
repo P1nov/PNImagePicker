@@ -13,6 +13,7 @@ typealias SelectAlbumCallBack = (_ album : PHAssetCollection) -> Void
 class PNUserAlbumViewController: BaseTableViewController {
 
     var userAlbums : PHFetchResult<PHAssetCollection>?
+    
     var didSelectAlbumCallBack : SelectAlbumCallBack?
 
     //MARK: lazyLoad
@@ -27,7 +28,7 @@ class PNUserAlbumViewController: BaseTableViewController {
         
     }
     
-    convenience init(didSelectAlbumCallBack : @escaping SelectAlbumCallBack?) {
+    convenience init(didSelectAlbumCallBack : @escaping SelectAlbumCallBack) {
         self.init()
         
         self.didSelectAlbumCallBack = didSelectAlbumCallBack
