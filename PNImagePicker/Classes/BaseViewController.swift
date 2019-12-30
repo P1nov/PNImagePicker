@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+public class BaseViewController: UIViewController {
     
     lazy var titleLabel: UILabel = {
         
@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
     
     //MARK: lifeCycle
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

@@ -10,7 +10,7 @@ import UIKit
 
 let BaseTableViewCellIdentifier = "BaseTableViewCellIdentifier"
 
-class BaseTableViewController: BaseViewController {
+public class BaseTableViewController: BaseViewController {
 
     //MARK: lazyLoad
     lazy var tableView: UITableView = {
@@ -28,7 +28,7 @@ class BaseTableViewController: BaseViewController {
     
     //MARK: lifeCycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -43,7 +43,7 @@ class BaseTableViewController: BaseViewController {
         
     }
     
-    override func viewWillLayoutSubviews() {
+    override public func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         tableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
@@ -68,27 +68,27 @@ class BaseTableViewController: BaseViewController {
 
 extension BaseTableViewController : UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         
         1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         return tableView.dequeueReusableCell(withIdentifier: BaseTableViewCellIdentifier, for: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
         0.0001
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         0.0001
     }
