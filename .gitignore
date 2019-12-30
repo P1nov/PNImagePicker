@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 # OS X
 .DS_Store
 
 # Xcode
 build/
-=======
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -20,7 +18,6 @@ xcuserdata/
 build/
 DerivedData/
 *.moved-aside
->>>>>>> df3284573516e7e70354ab701c78d554e0e43cdd
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -29,7 +26,6 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-<<<<<<< HEAD
 xcuserdata/
 *.xccheckout
 profile
@@ -53,8 +49,6 @@ Carthage/Build
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-# Pods/
-=======
 
 ## Obj-C/Swift specific
 *.hmap
@@ -88,7 +82,7 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
@@ -120,6 +114,3 @@ fastlane/test_output
 #
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
->>>>>>> df3284573516e7e70354ab701c78d554e0e43cdd
