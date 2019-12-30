@@ -1,0 +1,6 @@
+use_frameworks!
+target 'PNImagePicker_Tests' do
+  pod 'PNImagePicker', :path => '../'
+  
+  
+end
