@@ -10,7 +10,7 @@ import Photos
 
 typealias SelectAlbumCallBack = (_ album : PHAssetCollection) -> Void
 
-class PNUserAlbumViewController: BaseTableViewController {
+public class PNUserAlbumViewController: BaseTableViewController {
 
     var userAlbums : PHFetchResult<PHAssetCollection>?
     

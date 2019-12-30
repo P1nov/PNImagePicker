@@ -12,7 +12,7 @@ private let PSUserPhotoCollectionViewCellIdentifier = "PSUserPhotoCollectionView
 
 typealias AfterSelectedImages = ((_ images : [UIImage], _ selectedAssets : [Int : PHAsset]) -> Void)
 
-class PNUserPhotoViewController: BaseCollectionViewController {
+public class PNUserPhotoViewController: BaseCollectionViewController {
     
     var album : PHAssetCollection?
     

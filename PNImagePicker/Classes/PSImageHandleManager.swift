@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class PSImageHandleManager: NSObject {
+public class PSImageHandleManager: NSObject {
     
     private var groups : [Any] = []
     private var photos : [Any] = []
