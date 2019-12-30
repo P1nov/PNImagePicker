@@ -8,13 +8,13 @@
 import UIKit
 import Photos
 
-typealias SelectAlbumCallBack = (_ album : PHAssetCollection) -> Void
+public typealias SelectAlbumCallBack = (_ album : PHAssetCollection) -> Void
 
 public class PNUserAlbumViewController: BaseTableViewController {
 
-    var userAlbums : PHFetchResult<PHAssetCollection>?
+    public var userAlbums : PHFetchResult<PHAssetCollection>?
     
-    var didSelectAlbumCallBack : SelectAlbumCallBack?
+    public var didSelectAlbumCallBack : SelectAlbumCallBack?
 
     //MARK: lazyLoad
     
@@ -28,7 +28,7 @@ public class PNUserAlbumViewController: BaseTableViewController {
         
     }
     
-    convenience init(didSelectAlbumCallBack : @escaping SelectAlbumCallBack) {
+    public convenience init(didSelectAlbumCallBack : @escaping SelectAlbumCallBack) {
         self.init()
         
         self.didSelectAlbumCallBack = didSelectAlbumCallBack

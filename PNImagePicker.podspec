@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PNImagePicker'
-  s.version          = '1.1.9'
+  s.version          = '1.2.0'
   s.summary          = 'A conveninent ImagePicker Tool for U'
 
 # This description is used to generate tags and improve search results.

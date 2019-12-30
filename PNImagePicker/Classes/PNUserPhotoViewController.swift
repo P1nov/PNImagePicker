@@ -10,7 +10,7 @@ import Photos
 
 private let PSUserPhotoCollectionViewCellIdentifier = "PSUserPhotoCollectionViewCellIdentifier"
 
-typealias AfterSelectedImages = ((_ images : [UIImage], _ selectedAssets : [Int : PHAsset]) -> Void)
+public typealias AfterSelectedImages = ((_ images : [UIImage], _ selectedAssets : [Int : PHAsset]) -> Void)
 
 public class PNUserPhotoViewController: BaseCollectionViewController {
     
@@ -27,7 +27,7 @@ public class PNUserPhotoViewController: BaseCollectionViewController {
     }
     
     private var selectImages : [Int : UIImage]? = [:]
-    var selectAssets : [Int : PHAsset]? = [:] {
+    public var selectAssets : [Int : PHAsset]? = [:] {
         
         didSet(selectAssets) {
             
@@ -37,11 +37,11 @@ public class PNUserPhotoViewController: BaseCollectionViewController {
         }
     }
     
-    var didSelectedImagesCallBack : AfterSelectedImages?
+    public var didSelectedImagesCallBack : AfterSelectedImages?
     
     private var imageRequeseOptions = PHImageRequestOptions()
     
-    var maxSelect : Int = 9
+    public var maxSelect : Int = 9
     
     var selectNum : Int = 0
 
@@ -57,7 +57,7 @@ public class PNUserPhotoViewController: BaseCollectionViewController {
     
     //MARK: lifeCycle
     
-    convenience init(maxSelect : Int, selectsAssets : [Int : PHAsset], afterSelectImagesCallBack : @escaping AfterSelectedImages) {
+    public convenience init(maxSelect : Int, selectsAssets : [Int : PHAsset], afterSelectImagesCallBack : @escaping AfterSelectedImages) {
         
         self.init()
         
