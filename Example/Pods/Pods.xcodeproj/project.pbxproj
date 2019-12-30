@@ -203,16 +203,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		046508A523B9F087002DAD9B /* Picker */ = {
-			isa = PBXGroup;
-			children = (
-				046508A623B9F087002DAD9B /* PNUserPhotoViewController.swift */,
-				046508A723B9F087002DAD9B /* PNUserAlbumViewController.swift */,
-			);
-			name = Picker;
-			path = PNImagePicker/Classes/Picker;
-			sourceTree = "<group>";
-		};
 		0AD421AF3A58DF4304012076F5787557 /* Pods-PNImagePicker_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,27 +266,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		779606DE7D91C22AA7D3C20B5522C2AB /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				956E0BF981F7136B0A9246D8598F3BAA /* PSImageHandleManager.swift */,
-			);
-			name = Manager;
-			path = PNImagePicker/Classes/Manager;
-			sourceTree = "<group>";
-		};
-		9F8E3CE7ABEBC3FC59A144D3153AD779 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				9B2C9E5D32221B7E0D92D16DBA1113D2 /* BaseCollectionViewController.swift */,
-				85D3D468D40FE0E149824DD8E73919D2 /* BaseTableViewController.swift */,
-				EE80FE26C0556342F38E21DA6B9C4236 /* BaseViewController.swift */,
-				F11DB1F2D831E856143ED12306DFAEE3 /* Config */,
-			);
-			name = Base;
-			path = PNImagePicker/Classes/Base;
-			sourceTree = "<group>";
-		};
 		A1CBA20BC9877DBC4A6E53F93A07320A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,12 +300,20 @@
 		C7E2C5DB08D36D4EE27BFD7125099A15 /* PNImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				046508A523B9F087002DAD9B /* Picker */,
-				9F8E3CE7ABEBC3FC59A144D3153AD779 /* Base */,
-				779606DE7D91C22AA7D3C20B5522C2AB /* Manager */,
+				046508A623B9F087002DAD9B /* PNUserPhotoViewController.swift */,
+				046508A723B9F087002DAD9B /* PNUserAlbumViewController.swift */,
+				9B2C9E5D32221B7E0D92D16DBA1113D2 /* BaseCollectionViewController.swift */,
+				85D3D468D40FE0E149824DD8E73919D2 /* BaseTableViewController.swift */,
+				EE80FE26C0556342F38E21DA6B9C4236 /* BaseViewController.swift */,
+				9585856589D1A9E67A12458CF1D7B043 /* PSCommonDefineFile.swift */,
+				956E0BF981F7136B0A9246D8598F3BAA /* PSImageHandleManager.swift */,
+				260C6340C794A257549378E6EE0583C1 /* LSDIndicatorCustom.swift */,
+				6D418319BA9B9BDA185BFC7C98BCE012 /* LSDMidIndicatorView.swift */,
+				2876D80D8E062546EB0A134567E9C1A1 /* PNProgressHUD.swift */,
+				9F5572050531F5D00EE4F606E09E6574 /* PSImageToolBar.swift */,
+				BC5CA3EEE602CEE251E804A36B0BB5A9 /* PSUserPhotoCollectionViewCell.swift */,
 				52CE2DE76C079C90BA412D652477BDFD /* Pod */,
 				B3FD41CA0951569468FF178310E6A7E2 /* Support Files */,
-				FB127F46CCB4D2D852CF00477928E6A3 /* View */,
 			);
 			name = PNImagePicker;
 			path = ../..;
@@ -408,27 +385,6 @@
 				C91EDAA5CCFDB0CED5792EE230E47FD8 /* Support Files */,
 			);
 			path = SnapKit;
-			sourceTree = "<group>";
-		};
-		F11DB1F2D831E856143ED12306DFAEE3 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				9585856589D1A9E67A12458CF1D7B043 /* PSCommonDefineFile.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		FB127F46CCB4D2D852CF00477928E6A3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				260C6340C794A257549378E6EE0583C1 /* LSDIndicatorCustom.swift */,
-				6D418319BA9B9BDA185BFC7C98BCE012 /* LSDMidIndicatorView.swift */,
-				2876D80D8E062546EB0A134567E9C1A1 /* PNProgressHUD.swift */,
-				9F5572050531F5D00EE4F606E09E6574 /* PSImageToolBar.swift */,
-				BC5CA3EEE602CEE251E804A36B0BB5A9 /* PSUserPhotoCollectionViewCell.swift */,
-			);
-			name = View;
-			path = PNImagePicker/Classes/View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
