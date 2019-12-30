@@ -8,7 +8,6 @@
 
 import UIKit
 import Photos
-import SnapKit
 
 typealias SelectImageCallBack = (_ selected : Bool) -> Void
 
@@ -46,18 +45,11 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.addSubview(selectBtn)
         
-        imageView.snp.makeConstraints { (make) in
-            
-            make.center.equalToSuperview()
-            make.width.height.equalToSuperview()
-        }
+        imageView.center = contentView.center
+        imageView.frame.size = contentView.frame.size
         
-        selectBtn.snp.makeConstraints { (make) in
-            
-            make.top.equalToSuperview().offset(pScale(10))
-            make.right.equalToSuperview().offset(-pScale(10))
-            make.width.height.equalTo(pScale(20))
-        }
+        selectBtn.frame.size = CGSize(width: pScale(20), height: pScale(20))
+        selectBtn.frame.origin = CGPoint(x: contentView.bounds.width - pScale(35), y: pScale(15))
     }
     
     required init?(coder: NSCoder) {
