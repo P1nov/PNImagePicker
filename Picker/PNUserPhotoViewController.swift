@@ -32,6 +32,8 @@ class PNUserPhotoViewController: BaseCollectionViewController {
         didSet(selectAssets) {
             
             selectNum = selectAssets?.keys.count ?? 0
+            
+            collectionView.reloadData()
         }
     }
     
@@ -55,13 +57,15 @@ class PNUserPhotoViewController: BaseCollectionViewController {
     
     //MARK: lifeCycle
     
-    convenience init(maxSelect : Int, afterSelectImagesCallBack : @escaping AfterSelectedImages) {
+    convenience init(maxSelect : Int, selectsAssets : [Int : PHAsset], afterSelectImagesCallBack : @escaping AfterSelectedImages) {
         
         self.init()
         
         self.maxSelect = maxSelect
         
         didSelectedImagesCallBack = afterSelectImagesCallBack
+        
+        self.selectAssets = selectsAssets
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,8 +94,8 @@ class PNUserPhotoViewController: BaseCollectionViewController {
         
         config()
         
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "前往相册", style: .plain, target: self, action: #selector(gotoAlbum))
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(closeCurrent))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "前往相册", style: .plain, target: self, action: #selector(gotoAlbum))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(closeCurrent))
         
         collectionView.register(PSUserPhotoCollectionViewCell.self, forCellWithReuseIdentifier: PSUserPhotoCollectionViewCellIdentifier)
         
@@ -226,23 +230,36 @@ extension PNUserPhotoViewController {
     
     private func requestImage() {
         
-        PNProgressHUD.loading(at: nil)
-        
-        DispatchQueue.global().async {
+        if PSImageHandleManager.isAuthorized() {
+
+            PNProgressHUD.loading(at: nil)
             
-            PSImageHandleManager.shared.getRealImageFromAssets { (images, resource) in
+            DispatchQueue.global().async {
                 
-                DispatchQueue.main.async {
+                PSImageHandleManager.shared.getRealImageFromAssets { (images, resource) in
                     
-                    PNProgressHUD.hideLoading(from: nil)
-                    
-                    self.images = images
-                    self.resource = resource
-                    
-                    self.updateToolBarState()
+                    DispatchQueue.main.async {
+                        
+                        PNProgressHUD.hideLoading(from: nil)
+                        
+                        self.images = images
+                        self.resource = resource
+                        
+                        self.updateToolBarState()
+                    }
                 }
             }
+        }else {
+            
+            PNProgressHUD.present(with: "您为允许APP访问您的相册",
+                                  presentType: .fromTop,
+                                  font: .systemFont(ofSize: 15.0, weight: .medium),
+                                  backgroundColor: UIColor.init(red: 1, green: 75 / 255.0, blue: 50 / 255.0, alpha: 1.0),
+                                  textColor: .white,
+                                  in: nil)
         }
+        
+        
     }
 }
 
@@ -328,6 +345,41 @@ private extension PNUserPhotoViewController {
         }else {
             
             toolBar.confirmButton.isEnabled = true
+        }
+    }
+    
+    func gotoAlbum() {
+        
+        PNProgressHUD.loading(at: nil)
+        
+        PSImageHandleManager.shared.getUserAlbums { (albums) in
+            
+            PNProgressHUD.hideLoading(from: nil)
+            
+            let controller = PNUserAlbumViewController { (album) in
+                
+                PSImageHandleManager.shared.exchangePhotos(with: album) { (images) in
+                    
+                    if images.count == 0 {
+                        
+                        PNProgressHUD.present(with: "此相册没有照片！",
+                                              presentType: .fromTop,
+                                              font: .systemFont(ofSize: 15.0, weight: .medium),
+                                              backgroundColor: UIColor(rgb: 0xFF4B32),
+                                              textColor: .white,
+                                              in: nil)
+                    }else {
+                        
+                        self.images = images
+                        self.collectionView.reloadData()
+                    }
+                    
+                    
+                }
+            }
+            controller.userAlbums = albums
+            
+            self.navigationController?.pushViewController(controller, animated: true)
         }
     }
 }
