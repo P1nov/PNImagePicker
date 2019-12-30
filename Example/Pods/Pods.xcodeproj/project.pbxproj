@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00D297FD5395BE1BB590538B31A8E2F7 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E4E3541BF32A5C4247EA2CC09B4BE /* ConstraintViewDSL.swift */; };
-		04E7D45E23B9E074000B3487 /* PNUserAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7D45D23B9E074000B3487 /* PNUserAlbumViewController.swift */; };
+		046508A823B9F087002DAD9B /* PNUserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046508A623B9F087002DAD9B /* PNUserPhotoViewController.swift */; };
+		046508A923B9F087002DAD9B /* PNUserAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046508A723B9F087002DAD9B /* PNUserAlbumViewController.swift */; };
 		07F1A409190C82A7A533B5D7C6176CB4 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05C0772840EE66B3EB754BEF846F7A /* ConstraintMakerRelatable.swift */; };
 		094D9E6855BE9D9633DBB406B19F2DA4 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5902768DE34E1627B020F4B2FB7BBBE /* ConstraintLayoutSupportDSL.swift */; };
 		0A6F4AA95B9CFA55B585529FAF638831 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784E71663FDE42A52D425DA752FC02E7 /* ConstraintConstantTarget.swift */; };
@@ -64,7 +65,6 @@
 		F45C5DCB79CA2A96B8E62B1E8035A780 /* PNProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2876D80D8E062546EB0A134567E9C1A1 /* PNProgressHUD.swift */; };
 		FBD617932FED421C4E483A815A430F81 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21B2FDCEA78DB15010A749F9203D21F /* ConstraintRelation.swift */; };
 		FE7892B870EB3F9FEF2249091DBC7609 /* PNImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE33824FF173661CB4FF63D4952C17F /* PNImagePicker-dummy.m */; };
-		FF376EEF774A2D8192B8CB8AA085C3E8 /* PNUserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C0AA3866601BA3DB7C4EC2E3AAC41 /* PNUserPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,8 @@
 
 /* Begin PBXFileReference section */
 		002A7FE73C6B7B90CFB349F150E10430 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		04E7D45D23B9E074000B3487 /* PNUserAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNUserAlbumViewController.swift; sourceTree = "<group>"; };
+		046508A623B9F087002DAD9B /* PNUserPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNUserPhotoViewController.swift; sourceTree = "<group>"; };
+		046508A723B9F087002DAD9B /* PNUserAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNUserAlbumViewController.swift; sourceTree = "<group>"; };
 		144DAF3614C757BDAABBA78E4B4866FC /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		161FED143DE8DD1AC41D71D22AEA464B /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 		2469153A0AEFE8C6CAC283DE25054990 /* Pods-PNImagePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PNImagePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		2AB05D22C92E5A571A653D510E552AC0 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		358D075C0EDC457564A87F5AA949D016 /* Pods-PNImagePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PNImagePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A781F7FBB68B31F325FE21637B6EE1A /* Pods-PNImagePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PNImagePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3F4C0AA3866601BA3DB7C4EC2E3AAC41 /* PNUserPhotoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PNUserPhotoViewController.swift; sourceTree = "<group>"; };
 		3F812B71438F709C9BBB7D4B438DAA8B /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		3FD18889C3316A509049AFB71D451B06 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40C5937AEDD4F642E09E0A1980BCC652 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
@@ -203,13 +203,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04E7D45C23B9D4FB000B3487 /* Picker */ = {
+		046508A523B9F087002DAD9B /* Picker */ = {
 			isa = PBXGroup;
 			children = (
-				3F4C0AA3866601BA3DB7C4EC2E3AAC41 /* PNUserPhotoViewController.swift */,
-				04E7D45D23B9E074000B3487 /* PNUserAlbumViewController.swift */,
+				046508A623B9F087002DAD9B /* PNUserPhotoViewController.swift */,
+				046508A723B9F087002DAD9B /* PNUserAlbumViewController.swift */,
 			);
-			path = Picker;
+			name = Picker;
+			path = PNImagePicker/Classes/Picker;
 			sourceTree = "<group>";
 		};
 		0AD421AF3A58DF4304012076F5787557 /* Pods-PNImagePicker_Tests */ = {
@@ -330,7 +331,7 @@
 		C7E2C5DB08D36D4EE27BFD7125099A15 /* PNImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				04E7D45C23B9D4FB000B3487 /* Picker */,
+				046508A523B9F087002DAD9B /* Picker */,
 				9F8E3CE7ABEBC3FC59A144D3153AD779 /* Base */,
 				779606DE7D91C22AA7D3C20B5522C2AB /* Manager */,
 				52CE2DE76C079C90BA412D652477BDFD /* Pod */,
@@ -580,15 +581,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046508A823B9F087002DAD9B /* PNUserPhotoViewController.swift in Sources */,
 				1424B73C963AFFA786C79D5D8C978E78 /* BaseCollectionViewController.swift in Sources */,
 				ABBB502A9391A47FBD57993F0B428BC8 /* BaseTableViewController.swift in Sources */,
+				046508A923B9F087002DAD9B /* PNUserAlbumViewController.swift in Sources */,
 				8E8B43340B67652D806E090546F0B221 /* BaseViewController.swift in Sources */,
-				04E7D45E23B9E074000B3487 /* PNUserAlbumViewController.swift in Sources */,
 				4F49B36BF4BE4E8749FCDBC126D5F38C /* LSDIndicatorCustom.swift in Sources */,
 				C7A99FF6AD7A489891C8B884F65DC0E6 /* LSDMidIndicatorView.swift in Sources */,
 				FE7892B870EB3F9FEF2249091DBC7609 /* PNImagePicker-dummy.m in Sources */,
 				F45C5DCB79CA2A96B8E62B1E8035A780 /* PNProgressHUD.swift in Sources */,
-				FF376EEF774A2D8192B8CB8AA085C3E8 /* PNUserPhotoViewController.swift in Sources */,
 				D1276E09D954D51C9FCCCF5CB564402E /* PSCommonDefineFile.swift in Sources */,
 				B0E11DFBE3033B968A9F2346EBD8F553 /* PSImageHandleManager.swift in Sources */,
 				B324233D259F0961438E9ACACF698F5A /* PSImageToolBar.swift in Sources */,
