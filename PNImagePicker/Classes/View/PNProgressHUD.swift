@@ -12,13 +12,13 @@ class PNProgressHUDView : UIView {
     
     lazy var titleLabel: UILabel = {
         
-        let label = UILabel(frame: CGRect(x: 0, y: self.frame.origin.y - Scale(20), width: self.frame.width - Scale(50), height: 0.0))
+        let label = UILabel(frame: CGRect(x: 0, y: self.frame.origin.y - pScale(20), width: self.frame.width - pScale(50), height: 0.0))
         label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: 14.0)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.clipsToBounds = true
-        label.layer.cornerRadius = Scale(8)
+        label.layer.cornerRadius = pScale(8)
         
         return label
     }()
@@ -139,7 +139,7 @@ class PNProgressHUD: NSObject {
             
             UIView.animate(withDuration: 0.1, animations: {
                 
-                view.titleLabel.center = CGPoint(x: newSuperView!.bounds.width / 2.0, y: newSuperView!.bounds.origin.y + Scale(10) + view.titleLabel.frame.height)
+                view.titleLabel.center = CGPoint(x: newSuperView!.bounds.width / 2.0, y: newSuperView!.bounds.origin.y + pScale(10) + view.titleLabel.frame.height)
             }) { (completed) in
                 
                 UIView.animate(withDuration: 0.1, delay: 1, options: .curveEaseInOut, animations: {

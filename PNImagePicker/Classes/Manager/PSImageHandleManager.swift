@@ -130,7 +130,7 @@ class PSImageHandleManager: NSObject {
             for index in 0 ..< photos.count {
                 
                 PHImageManager.default().requestImage(for: photos[index],
-                                                      targetSize: CGSize(width: (UIScreen.main.scale * kScreenWidth - Scale(5)) / 5.0, height: (UIScreen.main.scale * kScreenWidth - Scale(5)) / 5.0),
+                                                      targetSize: CGSize(width: (UIScreen.main.scale * pScreenWidth - pScale(5)) / 5.0, height: (UIScreen.main.scale * pScreenWidth - pScale(5)) / 5.0),
                                                       contentMode: .aspectFill,
                                                       options: options) { (image, info) in
                     
@@ -184,7 +184,7 @@ class PSImageHandleManager: NSObject {
         for index in 0 ..< assets.count {
             
             PHImageManager.default().requestImage(for: assets[index],
-                                                  targetSize: CGSize(width: (UIScreen.main.scale * kScreenWidth - Scale(5)) / 5.0, height: (UIScreen.main.scale * kScreenWidth - Scale(5)) / 5.0),
+                                                  targetSize: CGSize(width: (UIScreen.main.scale * pScreenWidth - pScale(5)) / 5.0, height: (UIScreen.main.scale * pScreenWidth - pScale(5)) / 5.0),
                                                   contentMode: .aspectFill,
                                                   options: options) { (image, info) in
                 
@@ -210,16 +210,16 @@ class PSImageHandleManager: NSObject {
             totalHeight += image.size.height
         }
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: Scale(360),height: totalHeight * (Scale(360) / images[0].size.width)),
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: pScale(360),height: totalHeight * (pScale(360) / images[0].size.width)),
                                                false,
                                                UIScreen.main.scale)
         
         images.enumerated().forEach { (index, image) in
             
             let finalImage = self.getAspectFillWidthImage(image1: image,
-                                                          width: Scale(360))
+                                                          width: pScale(360))
             
-            image.draw(in: CGRect(x: 0, y: height, width: Scale(360), height: finalImage.size.height))
+            image.draw(in: CGRect(x: 0, y: height, width: pScale(360), height: finalImage.size.height))
             
             height += finalImage.size.height
         }

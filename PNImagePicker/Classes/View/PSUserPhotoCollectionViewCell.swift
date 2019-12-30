@@ -54,9 +54,9 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
         
         selectBtn.snp.makeConstraints { (make) in
             
-            make.top.equalToSuperview().offset(Scale(10))
-            make.right.equalToSuperview().offset(-Scale(10))
-            make.width.height.equalTo(Scale(20))
+            make.top.equalToSuperview().offset(pScale(10))
+            make.right.equalToSuperview().offset(-pScale(10))
+            make.width.height.equalTo(pScale(20))
         }
     }
     

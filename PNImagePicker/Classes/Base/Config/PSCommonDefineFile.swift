@@ -9,25 +9,25 @@
 import UIKit
 
 //MARK:-屏幕Width
-let kScreenWidth  = UIScreen.main.bounds.size.width
+let pScreenWidth  = UIScreen.main.bounds.size.width
 //MARK:-屏幕Height
-let kScreenHeight = UIScreen.main.bounds.size.height
+let pScreenHeight = UIScreen.main.bounds.size.height
 //MARK:-屏幕Size
-let kScreenSize   = UIScreen.main.bounds.size
+let pScreenSize   = UIScreen.main.bounds.size
 //MARK:-屏幕Scale
-let kScale        = UIScreen.main.scale
+let pScale        = UIScreen.main.scale
 
-private let scale_x = (kScreenWidth-0.000001)/375.0
+private let p_scale_x = (pScreenWidth-0.000001)/375.0
 
-func Scale(_ scale:CGFloat) -> CGFloat {
-    return scale*scale_x
+func pScale(_ scale:CGFloat) -> CGFloat {
+    return scale*p_scale_x
 }
 
 
 //MARK: -notificationName
 let PSImageSelectImageNotificationName = "PSImageSelectImageNotificationName"
 
-func kSafeBottomHeight() -> CGFloat {
+func pSafeBottomHeight() -> CGFloat {
     if #available(iOS 11.0, *) {
         
         if (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0) > 0 {

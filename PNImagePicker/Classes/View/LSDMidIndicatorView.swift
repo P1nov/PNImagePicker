@@ -12,7 +12,7 @@ class LSDMidIndicatorView: UIView {
     
     /// 背景view
     private lazy var bacView: UIView = {
-        let view = UIView(frame: CGRect(x: kScreenWidth/3, y: (kScreenHeight - 60)/2, width: kScreenWidth/3, height: 60))
+        let view = UIView(frame: CGRect(x: pScreenWidth/3, y: (pScreenHeight - 60)/2, width: pScreenWidth/3, height: 60))
         view.backgroundColor = .clear
         view.layer.cornerRadius = 5
         view.layer.shadowOffset = CGSize(width: 0, height: 2)
@@ -26,7 +26,7 @@ class LSDMidIndicatorView: UIView {
     private lazy var visual: UIVisualEffectView = {
         let blur = UIBlurEffect(style: .light)
         let vis = UIVisualEffectView(effect: blur)
-        vis.frame = CGRect(x: 0, y: 0, width: kScreenWidth/3, height: 60)
+        vis.frame = CGRect(x: 0, y: 0, width: pScreenWidth/3, height: 60)
         vis.backgroundColor = .white
         vis.alpha = 0.8
         vis.layer.cornerRadius = 5
@@ -36,12 +36,12 @@ class LSDMidIndicatorView: UIView {
     
     /// 自定义菊花
     private lazy var custom: LSDIndicatorCustom = {
-        let view = LSDIndicatorCustom(frame: CGRect(x: (kScreenWidth/3 - 40)/2, y: 10, width: 40, height: 40))
+        let view = LSDIndicatorCustom(frame: CGRect(x: (pScreenWidth/3 - 40)/2, y: 10, width: 40, height: 40))
         return view
     }()
     
     public convenience init() {
-        self.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight))
+        self.init(frame: CGRect(x: 0, y: 0, width: pScreenWidth, height: pScreenHeight))
         self.backgroundColor = .clear
         self.addSubview(self.bacView)
         self.bacView.addSubview(self.visual)
