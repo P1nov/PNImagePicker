@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PNImagePicker'
-  s.version          = '1.1.5'
+  s.version          = '1.1.6'
   s.summary          = 'A conveninent ImagePicker Tool for U'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = ['5.0', '5.1', '4.2', '4.0']
 
-  s.source_files = 'PNImagePicker/Classes/*.swift'
+  s.source_files = 'PNImagePicker/Classes/*'
   
   # s.resource_bundles = {
   #   'PNImagePicker' => ['PNImagePicker/Assets/*.png']
