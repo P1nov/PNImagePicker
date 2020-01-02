@@ -15,7 +15,7 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         
-        let imageView = UIImageView()
+        let imageView = UIImageView(frame: self.contentView.bounds)
         
         return imageView
     }()
@@ -27,9 +27,9 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
     
     lazy var selectBtn: UIButton = {
         
-        let button = UIButton()
-        button.setImage(UIImage(named: "photo_original_def"), for: .normal)
-        button.setImage(UIImage(named: "photo_sel_previewVc"), for: .selected)
+        let button = UIButton(frame: CGRect(x: contentView.bounds.width - pScale(35), y: pScale(15), width: pScale(20), height: pScale(20)))
+        button.setImage(UIImage(named: "photo_original_def.png"), for: .normal)
+        button.setImage(UIImage(named: "photo_sel_previewVc.png"), for: .selected)
         
         button.setTitleColor(.white, for: .normal)
         button.titleLabel!.font = UIFont.systemFont(ofSize: 12.0, weight: .medium)
@@ -45,12 +45,6 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.addSubview(selectBtn)
         
-        imageView.center = contentView.center
-        imageView.frame.origin = contentView.frame.origin
-        imageView.frame.size = contentView.frame.size
-        
-        selectBtn.frame.size = CGSize(width: pScale(20), height: pScale(20))
-        selectBtn.frame.origin = CGPoint(x: contentView.bounds.width - pScale(35), y: pScale(15))
     }
     
     required init?(coder: NSCoder) {
