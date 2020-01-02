@@ -15,7 +15,7 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         
-        let imageView = UIImageView(frame: self.contentView.bounds)
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: contentView.bounds.width, height: contentView.bounds.height))
         
         return imageView
     }()
@@ -28,8 +28,8 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
     lazy var selectBtn: UIButton = {
         
         let button = UIButton(frame: CGRect(x: contentView.bounds.width - pScale(35), y: pScale(15), width: pScale(20), height: pScale(20)))
-        button.setImage(UIImage(named: "photo_original_def.png"), for: .normal)
-        button.setImage(UIImage(named: "photo_sel_previewVc.png"), for: .selected)
+        button.setImage(UIImage(named: "photo_original_def"), for: .normal)
+        button.setImage(UIImage(named: "photo_sel_previewVc"), for: .selected)
         
         button.setTitleColor(.white, for: .normal)
         button.titleLabel!.font = UIFont.systemFont(ofSize: 12.0, weight: .medium)
