@@ -46,6 +46,7 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(selectBtn)
         
         imageView.center = contentView.center
+        imageView.frame.origin = contentView.frame.origin
         imageView.frame.size = contentView.frame.size
         
         selectBtn.frame.size = CGSize(width: pScale(20), height: pScale(20))
