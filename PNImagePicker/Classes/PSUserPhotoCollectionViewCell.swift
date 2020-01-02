@@ -28,8 +28,9 @@ class PSUserPhotoCollectionViewCell: UICollectionViewCell {
     lazy var selectBtn: UIButton = {
         
         let button = UIButton(frame: CGRect(x: contentView.bounds.width - pScale(35), y: pScale(15), width: pScale(20), height: pScale(20)))
-        button.setImage(UIImage(named: "photo_original_def"), for: .normal)
-        button.setImage(UIImage(named: "photo_sel_previewVc"), for: .selected)
+        let bundle = Bundle.init(url: URL.init(fileURLWithPath: "ImagePicker"))
+        button.setImage(UIImage(named: "photo_original_def.png", in: bundle, compatibleWith: nil), for: .normal)
+        button.setImage(UIImage(named: "photo_sel_previewVc.png", in: bundle, compatibleWith: nil), for: .selected)
         
         button.setTitleColor(.white, for: .normal)
         button.titleLabel!.font = UIFont.systemFont(ofSize: 12.0, weight: .medium)

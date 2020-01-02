@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00D297FD5395BE1BB590538B31A8E2F7 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E4E3541BF32A5C4247EA2CC09B4BE /* ConstraintViewDSL.swift */; };
+		044371BE23BD99910021F0F6 /* ImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 044371BD23BD99910021F0F6 /* ImagePicker.bundle */; };
 		046508B623B9F745002DAD9B /* PNProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046508AA23B9F744002DAD9B /* PNProgressHUD.swift */; };
 		046508B723B9F745002DAD9B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046508AB23B9F744002DAD9B /* BaseViewController.swift */; };
 		046508B823B9F745002DAD9B /* LSDIndicatorCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046508AC23B9F744002DAD9B /* LSDIndicatorCustom.swift */; };
@@ -93,6 +94,7 @@
 
 /* Begin PBXFileReference section */
 		002A7FE73C6B7B90CFB349F150E10430 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		044371BD23BD99910021F0F6 /* ImagePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ImagePicker.bundle; path = PNImagePicker/Assets/ImagePicker.bundle; sourceTree = "<group>"; };
 		046508AA23B9F744002DAD9B /* PNProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNProgressHUD.swift; path = PNImagePicker/Classes/PNProgressHUD.swift; sourceTree = "<group>"; };
 		046508AB23B9F744002DAD9B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = PNImagePicker/Classes/BaseViewController.swift; sourceTree = "<group>"; };
 		046508AC23B9F744002DAD9B /* LSDIndicatorCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LSDIndicatorCustom.swift; path = PNImagePicker/Classes/LSDIndicatorCustom.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		C7E2C5DB08D36D4EE27BFD7125099A15 /* PNImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				044371BD23BD99910021F0F6 /* ImagePicker.bundle */,
 				046508B523B9F745002DAD9B /* BaseCollectionViewController.swift */,
 				046508B023B9F744002DAD9B /* BaseTableViewController.swift */,
 				046508AB23B9F744002DAD9B /* BaseViewController.swift */,
@@ -521,6 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044371BE23BD99910021F0F6 /* ImagePicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
