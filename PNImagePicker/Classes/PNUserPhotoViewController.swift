@@ -292,7 +292,8 @@ private extension PNUserPhotoViewController {
                             object: nil,
                             userInfo: ["images" : images as Any, "assets" : self.selectAssets as Any])
                         }
-                    self.navigationController?.setViewControllers([self.navigationController!.viewControllers.first!], animated: true)
+                        
+                        self.closeCurrent()
                     }
                     
                 }
